@@ -1,0 +1,125 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#openModalButton").click(function () {
+            if (areAllFieldsFilled()) {
+                // Make an AJAX request to the server
+                $.ajax({
+                    url: "/Home/CreateAccount",  // Replace with your actual controller and action
+                    type: "POST", // or "GET" depending on your requirements
+                    data: {
+                        name: $("#form3Example1c").val(),
+                        email: $("#form3Example3c").val(),
+                        password: $("#form3Example4c").val()
+                    },
+                    success: function (result) {
+                        // Handle the server response, if needed
+                        console.log(result);
+
+                        // Show the modal after the server-side action
+                        $("#myModal").modal("show");
+                    },
+                    error: function (error) {
+                        // Handle errors, if any
+                        console.log(error);
+                    }
+                });
+            } else {
+                alert("Please fill in all the fields before creating.");
+            }
+        });
+
+        function areAllFieldsFilled() {
+            var name = $("#form3Example1c").val();
+            var email = $("#form3Example3c").val();
+            var password = $("#form3Example4c").val();
+
+            if (name.trim() === '' || email.trim() === '' || password.trim() === '') {
+                return false;
+            }
+
+            return true;
+        }
+    });
+</script>
+
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+
+<body>
+
+    <section class="vh-75">
+        <div class="container h-75">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11">
+                    <div class="card text-black" style="border-radius: 25px;">
+                        <div class="card-body p-md-5">
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Create Account</p>
+                                    <form class="mx-1 mx-md-4">
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="text" id="form3Example1c" name="name" class="form-control" />
+                                                <label class="form-label" for="form3Example1c">Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="email" id="form3Example3c" name="email" class="form-control" />
+                                                <label class="form-label" for="form3Example3c">Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="password" id="form3Example4c" name="password" class="form-control" />
+                                                <label class="form-label" for="form3Example4c">Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                            <button type="button" class="btn btn-primary btn-lg" id="openModalButton" data-toggle="modal" data-target="#myModal">Register</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" class="img-fluid" alt="Sample image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Account Creation</h5>
+                 
+                </div>
+                <div class="modal-body">
+                    Account Successfully Created
+                </div>
+                <div class="modal-footer">
+                    <a  class="btn btn-primary" data-dismiss="modal" asp-controller="Home" asp-action="Index">Go to Login</a>
+              
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
