@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\james\\Desktop\\PSITS Attendance\\PSITS Attendance.csproj": {}
+    "C:\\Users\\james\\Source\\Repos\\PSITS_Attendance\\PSITS Attendance.csproj": {}
   },
   "projects": {
-    "C:\\Users\\james\\Desktop\\PSITS Attendance\\PSITS Attendance.csproj": {
+    "C:\\Users\\james\\Source\\Repos\\PSITS_Attendance\\PSITS Attendance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\james\\Desktop\\PSITS Attendance\\PSITS Attendance.csproj",
+        "projectUniqueName": "C:\\Users\\james\\Source\\Repos\\PSITS_Attendance\\PSITS Attendance.csproj",
         "projectName": "PSITS Attendance",
-        "projectPath": "C:\\Users\\james\\Desktop\\PSITS Attendance\\PSITS Attendance.csproj",
+        "projectPath": "C:\\Users\\james\\Source\\Repos\\PSITS_Attendance\\PSITS Attendance.csproj",
         "packagesPath": "C:\\Users\\james\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\james\\Desktop\\PSITS Attendance\\obj\\",
+        "outputPath": "C:\\Users\\james\\Source\\Repos\\PSITS_Attendance\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"

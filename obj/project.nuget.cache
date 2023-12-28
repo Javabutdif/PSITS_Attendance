@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AcOc2bM4SuwZGp+qp3HhTmgn4qvTRx8Ow5/A6vglJlImRebvYqjwRIR53iLVbWO0hRV4mCjmyNz717xwtVdV/g==",
+  "dgSpecHash": "cI+Kvzw1GFrAXIAjjBOq75oz07Gvf0iTzc6RFnPOnH43gRO8GNrrtfC/a36j5p8RJGNkFMBGMLJKZOMMimkhVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\james\\Desktop\\PSITS Attendance\\PSITS Attendance.csproj",
+  "projectFilePath": "C:\\Users\\james\\Source\\Repos\\PSITS_Attendance\\PSITS Attendance.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\james\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\james\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

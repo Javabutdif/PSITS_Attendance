@@ -37,7 +37,7 @@ namespace PSITS_Attendance.Controllers
         }
         public IActionResult Login(string email, string password)
         {
-            var user = _db.administrative.Where(user => user.admin_email_address.CompareTo(email) ==0 && user.admin_password.CompareTo(password) == 0).FirstOrDefault();
+            var user = _db.administrative.Where(user => user.admin_email_address.CompareTo(email) ==0 && user.admin_password.CompareTo(password) == 0 && user.admin_status.CompareTo("TRUE") == 0).FirstOrDefault();
 
             if (user == null)
             {

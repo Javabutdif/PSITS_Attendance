@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PSITS Attendance")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74c45bbd316485ed147eaeebb995f0b6cdff0920")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38f1e00de907b08d4c1e60828dc69e7bf0eb8fd6")]
 [assembly: System.Reflection.AssemblyProductAttribute("PSITS Attendance")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PSITS Attendance")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
